@@ -10,7 +10,6 @@ export default defineConfig({
 			name: 'urql-scalars-exchange',
 		},
 	},
-	resolve: { alias: { src: resolve('src/') } },
 	plugins: [
 		dts({
 			rollupTypes: true,

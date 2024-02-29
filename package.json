@@ -1,7 +1,8 @@
 {
 	"name": "urql-scalars-exchange",
-	"private": true,
-	"version": "0.0.1",
+	"author": "Luca Hagel",
+	"version": "1.0.0",
+	"license": "MIT",
 	"type": "module",
 	"files": [
 		"dist"
@@ -25,8 +26,6 @@
 		"coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^19.0.3",
-		"@commitlint/config-conventional": "^19.0.3",
 		"@typescript-eslint/eslint-plugin": "^7.1.0",
 		"@typescript-eslint/parser": "^7.1.0",
 		"@urql/core": "^4.2.3",
