@@ -1,0 +1,57 @@
+{
+	"name": "urql-scalars-exchange",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/urql-scalars-exchange.umd.cjs",
+	"module": "./dist/urql-scalars-exchange.js",
+	"types": "./dist/urql-scalars-exchange.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/urql-scalars-exchange.js",
+			"require": "./dist/urql-scalars-exchange.umd.cjs"
+		}
+	},
+	"scripts": {
+		"build": "tsc && vite build",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"prepare": "husky",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"coverage": "vitest run --coverage"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.0.3",
+		"@commitlint/config-conventional": "^19.0.3",
+		"@typescript-eslint/eslint-plugin": "^7.1.0",
+		"@typescript-eslint/parser": "^7.1.0",
+		"@urql/core": "^4.2.3",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"graphql": "^16.8.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"typescript": "^5.2.2",
+		"vite": "^5.1.4",
+		"vite-plugin-dts": "^3.7.3",
+		"vitest": "^1.3.1",
+		"wonka": "^6.3.4"
+	},
+	"peerDependencies": {
+		"@urql/core": "^4.0.0",
+		"graphql": "^15.0.0 || ^16.0.0",
+		"wonka": "^6.0.0"
+	},
+	"lint-staged": {
+		"**/*.{js,ts,tsx}": [
+			"eslint --fix"
+		],
+		"**/*": "prettier --write --ignore-unknown"
+	}
+}

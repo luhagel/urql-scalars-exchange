@@ -1,0 +1,4 @@
+pnpm test:run
+pnpm lint-staged
+
+exit 1
