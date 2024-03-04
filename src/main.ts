@@ -16,6 +16,19 @@ import {
 import { DocumentNode, isNode } from 'graphql/language/ast'
 import { map, pipe } from 'wonka'
 
+interface PartialIntrospectionSchema {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	queryType: { name: string; kind?: any }
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	mutationType?: { name: string; kind?: any } | null
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	subscriptionType?: { name: string; kind?: any } | null
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	types?: readonly any[]
+}
+
+type IntrospectionData = IntrospectionQuery | { __schema: PartialIntrospectionSchema }
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ScalarMapping = (input: any) => any
 
@@ -118,7 +131,7 @@ function mapScalar(data: any, path: PropertyKey[], mapping: ScalarMapping): any 
 
 interface ScalarExchangeOptions {
 	scalars: Record<string, ScalarMapping>
-	schema: IntrospectionQuery
+	schema: IntrospectionData
 }
 
 function unpackTypeInner(type: GraphQLOutputType): GraphQLOutputType | void {
