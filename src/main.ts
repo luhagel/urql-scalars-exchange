@@ -155,7 +155,7 @@ function handleNever(value: never): never {
 }
 
 export default function scalarExchange({ schema, scalars }: ScalarExchangeOptions): Exchange {
-	const clientSchema = buildClientSchema(schema)
+	const clientSchema = buildClientSchema(schema as IntrospectionQuery)
 	const typeInfoInstance = new TypeInfo(clientSchema)
 
 	const getScalarsInQuery = (
