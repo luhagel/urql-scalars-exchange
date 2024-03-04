@@ -37,7 +37,7 @@ jobs:
           CI: true
 
       - name: Test
-        run: pnpm test:run --coverage --maxWorkers=2
+        run: pnpm test:run --coverage
         env:
           CI: true
 
