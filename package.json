@@ -1,8 +1,21 @@
 {
 	"name": "urql-scalars-exchange",
-	"author": "Luca Hagel",
-	"version": "1.0.1",
+	"author": "Luca Hagel <contact@luhagel.com>",
+	"version": "1.0.2",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/luhagel/urql-scalars-exchange.git"
+	},
+	"bugs": {
+		"url": "https://github.com/luhagel/urql-scalars-exchange/issues"
+	},
+	"homepage": "https://github.com/luhagel/urql-scalars-exchange",
+	"keywords": [
+		"urql",
+		"graphql",
+		"scalars"
+	],
 	"type": "module",
 	"files": [
 		"dist"
